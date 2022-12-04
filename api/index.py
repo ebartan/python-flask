@@ -4,6 +4,9 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 app = Flask(__name__)
+html = urlopen(baseUrl)
+soup = BeautifulSoup(html.read(), 'lxml')
+eczaneListesi = soup.find_all('li', class_='media')
 
 @app.route('/')
 def home():
