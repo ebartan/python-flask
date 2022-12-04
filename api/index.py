@@ -1,4 +1,7 @@
 from flask import Flask
+import pandas as pd
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
